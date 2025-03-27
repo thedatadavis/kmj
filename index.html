@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homesite Mortgage - We check every box so you can have it all!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+    </header>
+
+    <div class="tagline-banner">
+        <h1>We check every box so you can have it all!</h1>
+    </div>
+
+    <main class="container">
+        <section class="programs-grid">
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>All Fannie Mae and Freddie Mac Programs</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>One-Time-Close Construction to Perm</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>All FHA, VA, USDA programs</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>Low Cost Bridge Loans</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>Jumbo Mortgage Loans (Above $766,550)</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>Home Equity Loans*</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>Closing Cost Grant Programs</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>Debt Service Coverage Ratio (DSCR)</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>DPA Programs* $0 Down FHA</h3>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="checkmark"></div>
+                <div class="program-text">
+                    <h3>Non-Warrantable Condo Purchase Financing</h3>
+                </div>
+            </div>
+            
+            <p class="disclaimer">*Not available in all markets</p>
+        </section>
+
+        <section class="contact-info">
+            <div class="logo-container">
+                <img src="images/homesite-logo.png" alt="logo">
+            </div>
+            <div class="banker-info">
+                <h2>Kalea Jones</h2>
+                <p>Licensed Mortgage Banker</p>
+                <p>NMLS: 2679233</p>
+                <p>Phone: 248-781-0796</p>
+                <p>Email: <a href="mailto:kjones@homesitedirect.com">kjones@homesitedirect.com</a></p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <p>Interested in learning more about our mortgage options? Fill out the form below and we'll get back to you shortly.</p>
+            
+            <form id="inquiry-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="equal-housing">
+                <img src="images/Equal-Housing-Logo-300x200.png" alt="equal housing logo" width="120" height="80">
+            </div>
+            <p class="legal-text">
+                Conditions and restrictions apply. Please contact your banker for full details. This is a limited time offer that can be cancelled at any time without notice. Homesite Mortgage is licensed in Michigan, Florida, Illinois, and Missouri (NMLS# 789037) Homesite Mortgage Processing center is 222 S. Main Street, Suite 106, Rochester, MI 48307. Our Missouri address is 4625 Lindell Blvd, 2nd Floor, St. Louis, MO 63108.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // For this demo, we'll just show an alert
+            alert('Thank you for your inquiry! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

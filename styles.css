@@ -1,0 +1,361 @@
+:root {
+    --primary-color: #0a3b7c; /* Dark blue from the banner */
+    --secondary-color: #c9b77d; /* Gold/tan color for checkmarks */
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --border-color: #e0e0e0;
+    --white: #fff;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 250px;
+    background: linear-gradient(to bottom, #f5d7a1, #f5a742);
+    position: relative;
+    overflow: hidden;
+}
+
+/* House silhouette in the hero section */
+.hero::after {
+    content: '';
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 240px;
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: polygon(0% 60%, 50% 0%, 100% 60%, 100% 100%, 0% 100%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Tagline Banner */
+.tagline-banner {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 6px 20px;
+    text-align: center;
+}
+
+.tagline-banner h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Programs Grid */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.program-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+}
+
+.checkmark {
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checkmark::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 8px;
+    border-left: 3px solid var(--white);
+    border-bottom: 3px solid var(--white);
+    transform: translate(-50%, -60%) rotate(-45deg);
+}
+
+.program-text {
+    flex-grow: 1;
+}
+
+.program-text h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.disclaimer {
+    grid-column: 1 / -1;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.logo-container {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.logo-placeholder {
+    width: 250px;
+    height: 80px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+}
+
+.logo-placeholder::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 60px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo-homesite {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo-mortgage {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+}
+
+.banker-info {
+    flex: 0 0 300px;
+}
+
+.banker-info h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.banker-info p {
+    margin-bottom: 5px;
+}
+
+.banker-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.banker-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: var(--light-bg);
+    padding: 40px;
+    border-radius: 8px;
+    margin: 40px 0;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-form p {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0d2c5a;
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-bg);
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.equal-housing {
+    flex: 0 0 80px;
+}
+
+.equal-housing-symbol {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #000;
+    position: relative;
+    margin: 0 auto;
+}
+
+.equal-housing-symbol::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-color: transparent;
+    border-bottom: 25px solid #000;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    transform: translateY(-15px);
+}
+
+.equal-housing-symbol::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:
+        0 5px 0 0 #000,
+        0 15px 0 0 #000;
+}
+
+.legal-text {
+    flex: 1;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tagline-banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .banker-info {
+        text-align: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

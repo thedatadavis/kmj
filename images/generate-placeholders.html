@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #0a3b7c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Placeholder Image Generator</h1>
+    
+    <div class="instructions">
+        <p>This page generates placeholder images for the mortgage landing page. Right-click on each canvas and select "Save Image As..." to save the images to your computer.</p>
+        <p>Save them with the following names:</p>
+        <ul>
+            <li>hero.jpg - The hero background image</li>
+            <li>logo.png - The Homesite Mortgage logo</li>
+            <li>equal-housing.png - The Equal Housing Lender logo</li>
+        </ul>
+    </div>
+    
+    <h2>Hero Image (hero.jpg)</h2>
+    <canvas id="heroCanvas" width="1200" height="600"></canvas>
+    
+    <h2>Logo (logo.png)</h2>
+    <canvas id="logoCanvas" width="300" height="100"></canvas>
+    
+    <h2>Equal Housing Logo (equal-housing.png)</h2>
+    <canvas id="equalHousingCanvas" width="80" height="80"></canvas>
+    
+    <script>
+        // Hero Image
+        const heroCanvas = document.getElementById('heroCanvas');
+        const heroCtx = heroCanvas.getContext('2d');
+        
+        // Create gradient background
+        const heroGradient = heroCtx.createLinearGradient(0, 0, 0, 600);
+        heroGradient.addColorStop(0, '#f5d7a1');
+        heroGradient.addColorStop(1, '#f5a742');
+        heroCtx.fillStyle = heroGradient;
+        heroCtx.fillRect(0, 0, 1200, 600);
+        
+        // Draw a simple house
+        heroCtx.fillStyle = '#ffffff';
+        heroCtx.fillRect(700, 200, 400, 250);
+        
+        // Roof
+        heroCtx.fillStyle = '#8b4513';
+        heroCtx.beginPath();
+        heroCtx.moveTo(650, 200);
+        heroCtx.lineTo(900, 100);
+        heroCtx.lineTo(1150, 200);
+        heroCtx.closePath();
+        heroCtx.fill();
+        
+        // Door
+        heroCtx.fillStyle = '#5a3d2b';
+        heroCtx.fillRect(850, 350, 80, 100);
+        
+        // Windows
+        heroCtx.fillStyle = '#add8e6';
+        heroCtx.fillRect(750, 250, 80, 80);
+        heroCtx.fillRect(950, 250, 80, 80);
+        
+        // Ground
+        heroCtx.fillStyle = '#7caa2d';
+        heroCtx.fillRect(0, 450, 1200, 150);
+        
+        // Add text
+        heroCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        heroCtx.font = 'bold 24px Arial';
+        heroCtx.fillText('Placeholder Hero Image - Replace with actual photo', 20, 580);
+        
+        // Logo
+        const logoCanvas = document.getElementById('logoCanvas');
+        const logoCtx = logoCanvas.getContext('2d');
+        
+        // Background
+        logoCtx.fillStyle = '#ffffff';
+        logoCtx.fillRect(0, 0, 300, 100);
+        
+        // Text
+        logoCtx.fillStyle = '#0a3b7c';
+        logoCtx.font = 'bold 30px Arial';
+        logoCtx.fillText('Homesite', 20, 50);
+        
+        logoCtx.fillStyle = '#c9b77d';
+        logoCtx.font = 'bold 20px Arial';
+        logoCtx.fillText('MORTGAGE', 150, 50);
+        
+        // Roof icon
+        logoCtx.fillStyle = '#c9b77d';
+        logoCtx.beginPath();
+        logoCtx.moveTo(20, 70);
+        logoCtx.lineTo(50, 55);
+        logoCtx.lineTo(80, 70);
+        logoCtx.closePath();
+        logoCtx.fill();
+        
+        // Equal Housing Logo
+        const equalHousingCanvas = document.getElementById('equalHousingCanvas');
+        const equalHousingCtx = equalHousingCanvas.getContext('2d');
+        
+        // Background
+        equalHousingCtx.fillStyle = '#ffffff';
+        equalHousingCtx.fillRect(0, 0, 80, 80);
+        
+        // House outline
+        equalHousingCtx.strokeStyle = '#000000';
+        equalHousingCtx.lineWidth = 2;
+        equalHousingCtx.beginPath();
+        equalHousingCtx.moveTo(10, 40);
+        equalHousingCtx.lineTo(40, 15);
+        equalHousingCtx.lineTo(70, 40);
+        equalHousingCtx.lineTo(70, 70);
+        equalHousingCtx.lineTo(10, 70);
+        equalHousingCtx.closePath();
+        equalHousingCtx.stroke();
+        
+        // Equal sign
+        equalHousingCtx.fillStyle = '#000000';
+        equalHousingCtx.fillRect(25, 45, 30, 3);
+        equalHousingCtx.fillRect(25, 55, 30, 3);
+    </script>
+</body>
+</html>
